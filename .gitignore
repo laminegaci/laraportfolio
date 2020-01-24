@@ -1,0 +1,14 @@
+/node_modules
+/public/hot
+/public/css/dist
+/public/fontawesome-free-5.11.2-web
+/public/storage
+/storage/*.key
+/vendor
+.env
+.env.backup
+.phpunit.result.cache
+Homestead.json
+Homestead.yaml
+npm-debug.log
+yarn-error.log
