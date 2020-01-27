@@ -10,9 +10,10 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('/welcome', function(){
-    return view('welcome');
-});
+// Route::get('/welcome', function(){
+//     return view('welcome');
+// });
+
 Route::get('/', 'PortfolioController@index')->name('portfolio');
 Route::get('/posts', 'PostController@index')->name('blog.posts.index');
 Route::get('/posts/category/technologie', 'PostController@technologie_cat')->name('blog.posts.technologie');
@@ -24,7 +25,13 @@ Route::group(['middleware' => ['auth']], function(){
     Route::get('/admin', 'HomeController@index')->name('dashboard');
     Route::resource('/admin/posts', 'ManagePostController');
     Route::resource('/admin/portfolios', 'ManagePortfolioController');
+    Route::resource('/admin/messages', 'messageController')->only(['index' ,'show']);
+
 });
+
+Route::resource('/contact', 'messageController');
+
+
 
 
 

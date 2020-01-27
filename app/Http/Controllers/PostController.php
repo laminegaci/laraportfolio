@@ -51,6 +51,7 @@ class PostController extends Controller
     //     //dd(auth()->user());
     //     return view('admin.post.create');
     }
+    
 
     
 

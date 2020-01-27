@@ -3,9 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Laraportfolio</title>
+    <title>laraportolio/contact</title>
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
     <link rel="stylesheet" href="{{ asset('fontawesome-free-5.11.2-web/css/all.css') }}"/>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -22,194 +21,26 @@
 </head>
 <body>
 
-<div class="container-fluid">
-    <nav id="nav">
-        <div class="logo">
-          <a href="#accueil"> <img class="" src="storage/images/logo3.png" alt="" id="logo"></a>
-        </div>
-        <ul class="navbar">
-            <li><a href="#propos" class="link">A propos</a></li>
-            <li><a href="#services" class="link">Services</a></li>
-            <li> <a href="#projects" class="link">Portfolio</a></li>
-            <li><a href="{{ route('blog.posts.index') }}" class="link">Blog</a></li>
-            <li><a href="{{route('contact.create')}}" class="link">Contact</a></li>
-        </ul>
-        <div class="burger">
-            <div class="line1"></div>
-            <div class="line2"></div>
-            <div class="line3"></div>
-        </div>
-    </nav><!-- end nav -->
-    
-    <div class="accueil" id="accueil">
-        <div class="row">
-            <div class="hello_area" data-aos="fade-up"> 
-            
-                <h1 class="titre" >𝓗𝓮𝓵𝓵𝓸..! <br> 𝓙𝓮 𝓶'𝓪𝓹𝓹𝓮𝓵𝓵𝓮 𝓛𝓪𝓶𝓲𝓷𝓮  </h1>
-                <p class="description"><i class="quote teal left icon"></i>Je suis un Developpeur Web <br>
-                FULL STACK Front-End & Back-End <br> à Alger. <br>
-                Bienvenue sur mon portfolio!  <i class="quote teal right icon"></i></p>
-                <a href="{{route('contact.create')}}">Contactez moi</a>
-            </div><!-- end class hello_area -->
-        </div><!-- end row class -->
-
-        <div class="button top" >
-           <a href="#accueil" > <i class="fas fa-angle-double-up fa-2x" id="button_top"></i></a>
-           
-        </div>
+<nav id="nav">
+<div class="logo">
+        <a href="{{route('portfolio')}}"> <img class="" src="{{ asset('storage/images/logo3.png') }}" alt="sdsd" id="logo"></a>
+    </div>
+    <ul class="navbar">
+        <li><a href="#propos" class="link"></a></li>
+        <li><a href="#services" class="link"></a></li>
+        <li> <a href="#projects" class="link"></a></li>
+        <li><a href="{{ route('blog.posts.index') }}" class="link">Blog</a></li>
+        <li><a href="{{route('contact.create')}}" class="link">Contact</a></li>
+    </ul>
+    <div class="burger">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+    </div>
+</nav><!-- end nav -->
+<section class="section_contact" id="contact">
+        <h1 class="titre"></h1>
         
-    </div><!-- end class accueil -->
-
-    <section class="section_propos" id="propos">
-        <h1 class="titre">A propos</h1>
-        <hr>
-            
-            <div class="propos">
-                <div class="my_photo" data-aos="fade-right" data-aos-duration="3000">
-                    <img src="storage/images/IMG_0571.png" alt="">
-                </div>
-                <div class="details" data-aos="fade-left" data-aos-duration="3000">
-                    <p class="description">
-                        Salut! Je m'appelle GAci mohamed lamine, <br/>Algerien habité a alger, je suis un developpeur web<br/> spécialisée 
-                        dans la création et la refonte<br/>  de sites web et apllication web<br/>
-                        Je travaille avec :<br/>
-                        
-                    </p>
-            
-                <p class="competence">HTML/CSS | Bootstrap | Semantic UI | JQuerry | PHP | Laravel | Mysql</p>
-
-                
-                <marquee behavior="" direction="left" height="80" width="500">  𝓙𝓮 𝓼𝓾𝓲𝓼 𝓭é𝓿𝓮𝓵𝓸𝓹𝓹𝓮𝓾𝓻 𝔀𝓮𝓫 𝓲𝓷𝓭é𝓹𝓮𝓷𝓭𝓪𝓷𝓽</marquee>
-                </div>
-            </div>
-    </section><!-- end section_propos -->
-
-
-
-    <section class="section_services" id="services">
-                
-                <h1 class="titre">Services</h1>
-                <hr>
-           
-            <hr>
-            <div class=" container">
-       
-                <div class="services">
-                   
-                    <div class="svs_item" data-aos="fade-up">
-                        
-                            <div class="service">
-                                <i class="edit big icon"></i>
-                                <h3>Conception graphique</h3>
-                                    <p>Création de logo, maquettes design de tous supports web (prototypage)
-                                        est créée sur mesure pour répondre aux besoins de votre cible.</p>
-                                   
-                            </div>
-                        
-                    </div>
-                    <div class="svs_item" data-aos="fade-up">
-                        
-                            <div class="service">
-                                <i class="code big icon" ></i>
-                                <h3>Développement web</h3>
-                                    <p>développer tous types de sites internet :
-                                         site vitrine, site catalogue, site e-commerce, 
-                                         responsive site web sur mesure .</p>
-
-                            </div>
-                        
-                    </div>
-
-                   
-                    <div class="svs_item" data-aos="fade-up">
-                        
-                            <div class="service">
-                                <i class="mobile alternate big icon"></i>
-                                <h3>RESPONSIVE DESIGN</h3>
-                                <p>Compatible tous supports, tablette & application mobile.</p>
-
-                            </div>
-                        
-                    </div>
-                    
-                    <div class="svs_item" data-aos="fade-up">
-                        
-                            <div class="service">
-                                <i class="images outline big icon"></i>
-                                <h3>INTÉGRATION WEB</h3>
-                                <p>Des intégrations HTML / CSS
-                                respectueuses des standards du Web.</p>
-
-                            </div>
-                        
-                    </div>
-                    <div class="svs_item" data-aos="fade-up">
-                        
-                            <div class="service">
-                                <i class="code big icon"></i>
-                                <h3>DÉVELOPPEMENTS SPÉCIFIQUES</h3>
-                                <p>Des outils adaptés à votre coeur de métier,
-                                applications & solutions personnalisées.</p>
-
-                            </div>
-                        
-                    </div>
-                    <div class="svs_item" data-aos="fade-up">
-                        
-                            <div class="service">
-                                <i class="database big icon"></i>
-                                <h3>GESTION DE BASE DONNEE</h3>
-                                <p>Des outils adaptés à votre coeur de métier,
-                                applications & solutions personnalisées.</p>
-
-                            </div>
-                        
-                    </div>
-                </div>
-        
-
-            </div><!-- end container -->
-    </section><!-- end section_services -->
-
-    
-    
-    <section class="section_project" id="projects">
-            <h1 class="titre" data-aos="fade-right" data-aos-duration="3000" data-aos-once="false" >Portfolio</h1>
-            <hr data-aos="fade-right" data-aos-easing="ease-in-back" data-aos-duration="3000" data-aos-once="false">
-                 
-                <div class="projets">
-                    
-                    
-                    @foreach($portfolios as $portfolio)
-                    <div class="item" data-aos="fade-up" data-aos-easing="ease-in-back" data-aos-duration="1000">
-                          <div class="face1">
-                           <img src="{{ $portfolio->image }}" alt="mkch">
-                         </div>
-                         <div class="face2">
-                             <h3>{{$portfolio->type}}</h3>
-                             <p>{{$portfolio->description}}</p>
-                             </div>
-                         </div>  
-                    @endforeach
-                  
-
-                </div>
-              
-               <form action="" method="POST">
-                        <button class="ui orange button">Voir Plus ...</button>
-                </form> 
-                            
-           
-
-    </section><!-- end section_project -->
-
-    
-
-   
-
-    <!-- <section class="section_contact" id="contact">
-        <h1 class="titre">Contact</h1>
-        <hr>
             <div class="ui container">
                 
                 <div class="contacts">
@@ -223,7 +54,7 @@
                         </div>
                         <div class="right">
                             <div class="form-control">
-                                <form method="POST" action="" class="form">
+                                <form method="POST" action=" {{route('contact.store')}} " class="form">
                                         @csrf
                                         <div class="field" data-aos="fade-left"   data-aos-delay="300"
                                                         data-aos-offset="0"  data-aos-easing="ease-in-back">
@@ -256,7 +87,7 @@
                 </div>
         
 
-            </div><!-- end container -->
+        </div><!-- end container -->
     </section><!-- end section_contact -->
 
     <footer>
@@ -339,7 +170,7 @@
 
 </div>
 
-<script>
+    <script>
 
 
 
@@ -411,4 +242,4 @@ navSlid();
   AOS.init();
 </script>
 </body>
-</html>
+</html>     

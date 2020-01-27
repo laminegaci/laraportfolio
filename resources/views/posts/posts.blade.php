@@ -28,7 +28,8 @@
         </nav><!-- end nav -->
         <div class="content">
             <div class="slidbar">
-</div>
+           <img src="{{ asset('storage/images/bg_blog.jpg')}}" class="" alt="Responsive image">
+            </div>
 
         <div class="container mt-5">
         <h1>Toute Les articles</h1>

@@ -39,7 +39,26 @@ class ManagePortfolioController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        dd(request()->all());
+        //   request()->validate([
+        //     'type' => 'required',
+        //     'description' => 'required',
+        //     'image' => 'required',
+        // ]);
+
+        // Post::insert([
+        //     'titre' => request('titre'),
+        //     'description' => request('description'),
+        //     'categorie' => request('categorie'),
+        //     'image' => request('image'),
+        //     'date_publication' => Carbon::now(),
+        //     'user_id' => request('user_id'),
+        // ]);
+       
+        // auth()->user()->posts()->create(request()->all() + ['date_publication' => Carbon::now()]);
+        // //Post::create(request()->all() + ['date_publication' => Carbon::now() , 'user_id' => auth()->id()]);
+
+        // return redirect()->route('posts.index');
     }
 
     /**
