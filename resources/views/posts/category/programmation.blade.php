@@ -13,14 +13,14 @@
 <h1>programmation articles</h1>
     
     <div class="row">
-        <div class="col-lg-8">   
+        <div class="col-md-8">   
             
             @forelse($posts as $post)     
                 <div class="media row">
-                    <div class="col-md-5">
+                    <div class="col-lg-5">
                         <img class="mr-3" style="width:250px;height:150px;" src="storage/images/{{ $post->image }}" alt="mal9itch  l'image">
                     </div>
-                    <div class="col-md-7">
+                    <div class="col-lg-7">
                         <div class="media-body">
                         
                             <h5 class="mt-0">{{ $post->titre }} </h5>
@@ -39,7 +39,7 @@
         
 
         </div>
-        <div class="col-lg-4">
+        <div class="col-md-4">
             <div class="row  latest_article">
                
                 <ul class="ml-4">

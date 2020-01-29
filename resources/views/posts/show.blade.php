@@ -11,11 +11,19 @@
 <div class="container mt-5">
     
 <div class="row">
-    <div class="col-sm-8">
-    <img class="mr-3" style="width:700px;height:350px;" src="../../storage/images/{{ $posts->image }}" alt="mal9itch  l'image">
-    <h2>{{$posts->titre}}</h2>
-    <p>{{$posts->description}}</p>
+    <div class="col-md-8">
+        <img class="mr-3" style=";width: 100%;max-width:80%;height: auto;" src="../../storage/images/{{ $posts->image }}" alt="mal9itch  l'image">
+        <h2>{{$posts->titre}}</h2>
+        <p>{{$posts->description}}</p>
        
+    </div>
+    <div class="col-md-4">
+    <div class="row  latest_article">
+                        
+                        <ul class="ml-4">
+                          @include('posts.widgets.lastposts')
+                        </ul>
+                    </div>
     </div>
    
 </div>
