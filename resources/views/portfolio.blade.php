@@ -11,10 +11,7 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
     
-    
-    
-    
-    
+
     <link rel="stylesheet" href="{{ asset('css/dist/semantic.css') }}"/>
     <script src="{{ asset('css/dist/jquery-3.3.1.min.js') }}"></script>
     <script src="{{ asset('css/dist/semantic.min.js') }}"></script>
@@ -25,7 +22,7 @@
 <div class="container-fluid">
     <nav id="nav">
         <div class="logo">
-          <a href="#accueil"> <img class="" src="storage/images/logo3.png" alt="" id="logo"></a>
+          <a href="#accueil"> <img class="" src="storage/images/logo test2.png" alt="" id="logo"></a>
         </div>
         <ul class="navbar">
             <li><a href="#propos" class="link">A propos</a></li>
@@ -46,17 +43,20 @@
             <div class="hello_area" data-aos="fade-up"> 
             
                 <h1 class="titre" >𝓗𝓮𝓵𝓵𝓸..! <br> 𝓙𝓮 𝓶'𝓪𝓹𝓹𝓮𝓵𝓵𝓮 𝓛𝓪𝓶𝓲𝓷𝓮  </h1>
-                <p class="description"><i class="quote teal left icon"></i>Je suis un Developpeur Web <br>
+                <p class="description"><i class="quote orange left icon"></i>Je suis un Developpeur Web <br>
                 FULL STACK Front-End & Back-End <br> à Alger. <br>
-                Bienvenue sur mon portfolio!  <i class="quote teal right icon"></i></p>
+                Bienvenue sur mon portfolio!  <i class="quote orange right icon"></i></p>
                 <a href="{{route('contact.create')}}">Contactez moi</a>
             </div><!-- end class hello_area -->
         </div><!-- end row class -->
+        <img style="margin-top:625px; margin-left:150px; width:60px;height:60px;" src="{{ asset('storage/images/button_down.png') }}" alt="">
 
         <div class="button top" >
            <a href="#accueil" > <i class="fas fa-angle-double-up fa-2x" id="button_top"></i></a>
            
         </div>
+        
+
         
     </div><!-- end class accueil -->
 
@@ -96,7 +96,7 @@
        
                 <div class="services">
                    
-                    <div class="svs_item" data-aos="fade-up">
+                    <div class="svs_item" data-aos="fade-up" de>
                         
                             <div class="service">
                                 <i class="edit big icon"></i>
@@ -107,7 +107,7 @@
                             </div>
                         
                     </div>
-                    <div class="svs_item" data-aos="fade-up">
+                    <div class="svs_item" data-aos="fade-up" data-aos-delay="150">
                         
                             <div class="service">
                                 <i class="code big icon" ></i>
@@ -121,7 +121,7 @@
                     </div>
 
                    
-                    <div class="svs_item" data-aos="fade-up">
+                    <div class="svs_item" data-aos="fade-up" data-aos-delay="300">
                         
                             <div class="service">
                                 <i class="mobile alternate big icon"></i>
@@ -143,7 +143,7 @@
                             </div>
                         
                     </div>
-                    <div class="svs_item" data-aos="fade-up">
+                    <div class="svs_item" data-aos="fade-up" data-aos-delay="150">
                         
                             <div class="service">
                                 <i class="code big icon"></i>
@@ -154,13 +154,12 @@
                             </div>
                         
                     </div>
-                    <div class="svs_item" data-aos="fade-up">
+                    <div class="svs_item" data-aos="fade-up" data-aos-delay="300">
                         
                             <div class="service">
                                 <i class="database big icon"></i>
                                 <h3>GESTION DE BASE DONNEE</h3>
-                                <p>Des outils adaptés à votre coeur de métier,
-                                applications & solutions personnalisées.</p>
+                                <p>créer et administrer des bases de données relationnelles.</p>
 
                             </div>
                         
@@ -171,11 +170,14 @@
             </div><!-- end container -->
     </section><!-- end section_services -->
 
-    
+   
     
     <section class="section_project" id="projects">
             <h1 class="titre" data-aos="fade-right" data-aos-duration="3000" data-aos-once="false" >Portfolio</h1>
+
             <hr data-aos="fade-right" data-aos-easing="ease-in-back" data-aos-duration="3000" data-aos-once="false">
+
+       
                  
                 <div class="projets">
                     
@@ -203,67 +205,11 @@
 
     </section><!-- end section_project -->
 
-    
-
-   
-
-    <!-- <section class="section_contact" id="contact">
-        <h1 class="titre">Contact</h1>
-        <hr>
-            <div class="ui container">
-                
-                <div class="contacts">
-                   
-                        <div class="left">
-                                <p>
-                                Si vous êtes intéressé à travailler ensemble, remplissez le formulaire ci-dessous et 
-                                décrivez votre projet. Je vous répondrai dès que possible.<br> s'il vous plaît, attendez 
-                                quelques jours pour que je réponde
-                                </p>
-                        </div>
-                        <div class="right">
-                            <div class="form-control">
-                                <form method="POST" action="" class="form">
-                                        @csrf
-                                        <div class="field" data-aos="fade-left"   data-aos-delay="300"
-                                                        data-aos-offset="0"  data-aos-easing="ease-in-back">
-                                            <input class="field-input" type="text" name="nom" placeholder="Nom">
-                                        </div>
-                                        <div class="field" data-aos="fade-left"   data-aos-delay="300"
-                                                         data-aos-offset="0"  data-aos-easing="ease-in-back">
-                                            <input class="field-input" type="text" name="prenom" placeholder="prenom">
-                                        </div>
-                                        <div class="field" data-aos="fade-left"   data-aos-delay="300"
-                                                        data-aos-offset="0"  data-aos-easing="ease-in-back">
-                                            <input class="field-input" type="text" name="email" placeholder="e-mail">
-                                        </div>
-                                        <div class="field" data-aos="fade-left"   data-aos-delay="300"
-                                                        data-aos-offset="0"  data-aos-easing="ease-in-back">
-                                        <textarea class="field-input message" row="6" placeholder="Message" name="message"></textarea>
-                                        </div>
-                                        <input type="submit" value="Envoyer" class="btn envoyer" data-aos="fade-left"   data-aos-delay="300"
-                                                        data-aos-offset="0"  data-aos-easing="ease-in-back">
-                                   
-                                </form>
-                            </div>
-                        <!-- <marquee behavior="" direction="down" height="100" width="200" bgcolor="white">  Scrolling text</marquee> -->
-                        </div>
-                       
-                   
-
-                   
-                   
-                </div>
-        
-
-            </div><!-- end container -->
-    </section><!-- end section_contact -->
-
     <footer>
+        
         <div class="ui container">
             <div class="footer_content">
                 <div class="left">
-                    <!-- <img src="images/logo3.png" alt="mkch"> -->
                     <h3>Je mets en service</h3>
                     <ul>
                         <li>Conception graphique</li>
@@ -278,8 +224,8 @@
                     
                    <h3>Freelancer</h3>
                    <ul>
-                       <li>Contact</li>
-                       <li>Blog</li>
+                      <a href="{{ route('contact.create') }}"> <li>Me contact</li></a>
+                       <a href="{{ route('blog.posts.index') }}"><li>Blog</li></a>
                    </ul>
                 </div>
                 <div class="right">
@@ -319,20 +265,6 @@
             <hr class="footer-hr">
             <p class="copyright"> 2019-2020 Mon Portfolio  -Tous les droits sont réservés.</p>
         </div>
-      
-
-       <!-- <div style="width:200px;  height:200px; background-color:#D14233;">
-            <figure class="imghvr-push-up" style="background-color:white;">
-            <img src="images/pc1.png">
-            <figcaption>
-               <form action="">
-                    <input type="submit">
-                    <input type="submit">
-               </form>
-            </figcaption>
-            </figure>
-       </div> -->
-             
     </footer><!-- end footer -->
 
      
@@ -340,7 +272,6 @@
 </div>
 
 <script>
-
 
 
 const navSlid = () => {
@@ -382,10 +313,10 @@ navSlid();
 
     window.onscroll = function(){
         if(window.pageYOffset > 50) {
-            nav.style.background = '#333';
+            nav.style.background = 'rgba(0, 0, 0, 0.3)';
             nav.style.boxShadow = '0px 0px 32px 1px rgba(255, 255, 255)';
-            nav.style.height = "6vh";
-            document.getElementById('logo').style.width = '40%'
+            //nav.style.height = "6vh";
+            //document.getElementById('logo').style.width = '60%'
             button_top.style.color = '#53b4e5';
             button_top.style.border = "1px solid #53b4e5";
             button_top.style.borderRadius = "50%";
@@ -395,9 +326,9 @@ navSlid();
         }else {
             nav.style.background = "transparent";
             nav.style.boxShadow = '0px 10px 32px 18px rgba(255, 255, 255,0)';
-            nav.style.height = "8vh";
-            document.getElementById('logo').style.width = '50%'
-            document.getElementById('logo').style.transition = '0.5s'
+            //nav.style.height = "8vh";
+            //document.getElementById('logo').style.width = '100%'
+            //document.getElementById('logo').style.transition = '0.5s'
             button_top.style.color = 'rgb(255,255,255,0)'; 
             button_top.style.border = "none";
            

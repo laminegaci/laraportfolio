@@ -3,7 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use App\Message;
+use Carbon\Carbon;
 class messageController extends Controller
 {
     /**
@@ -13,7 +14,8 @@ class messageController extends Controller
      */
     public function index()
     {
-        //
+        $messages = Message::latest('date_envoie')->get();
+        return view('admin.message.messages', compact('messages'));
     }
 
     public function create()
@@ -31,7 +33,13 @@ class messageController extends Controller
      */
     public function store(Request $request)
     {
-        dd(request()->all());
+        //dd(request()->all());
+        request()->validate([
+            'nom' => 'required',
+            'prenom' => 'required',
+            'email' => 'required',
+            'contenu' => 'required',
+        ]);
     //     request()->validate([
     //         'titre' => 'required',
     //         'description' => 'required',
@@ -49,9 +57,9 @@ class messageController extends Controller
     //     // ]);
        
     //     auth()->user()->posts()->create(request()->all() + ['date_publication' => Carbon::now()]);
-    //     //Post::create(request()->all() + ['date_publication' => Carbon::now() , 'user_id' => auth()->id()]);
+    Message::create(request()->all() + ['date_envoie' => Carbon::now()]);
 
-    //     return redirect()->route('posts.index');
+    return redirect()->route('contact.create')->withsuccess('Votre message a été envoyer avec succès');
     }
 
     

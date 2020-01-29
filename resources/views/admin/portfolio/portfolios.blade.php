@@ -13,6 +13,7 @@
                         <a href=" {{route('dashboard')}} "><li>dashboard</li></a>
                         <a href=" {{route('posts.index')}} "><li>posts</li></a>
                         <a href=" {{route('portfolios.index')}} "><li>projets</li></a>
+                        <a href=" {{route('messages.index')}} "><li>messages</li></a>
                     </ul>
                     <table class="table">
                         <thead>

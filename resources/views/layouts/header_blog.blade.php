@@ -1,6 +1,6 @@
 <nav id="navig">
             <div class="logo">
-                <a href="{{ route('portfolio') }}"> <img class="" src="../../storage/images/logo3.png" alt="mkchha" id="logo"></a>
+                <a href="{{ route('portfolio') }}"> <img class="" src="{{ asset('storage/images/logo test2.png') }}" alt="mkchha" id="logo"></a>
             </div>
             <ul class="navbarr">
                 <li> <a href="{{route('blog.posts.index')}} " class="link">Touts</a></li>

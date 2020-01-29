@@ -11,6 +11,7 @@
 @section('content')
 <div class="container">
 @include('errors')  
+
 <h2>formulaire de creation de post</h2>
 
 <form action=" {{route('posts.store')}} " class="form" method="POST">

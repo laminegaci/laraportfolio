@@ -17,13 +17,48 @@
     <link rel="stylesheet" href="{{ asset('css/dist/semantic.css') }}"/>
     <script src="{{ asset('css/dist/jquery-3.3.1.min.js') }}"></script>
     <script src="{{ asset('css/dist/semantic.min.js') }}"></script>
-    
+    <style>
+    .alert {
+    position: relative;
+    padding: 0.75rem 1.25rem;
+    margin-bottom: 1rem;
+    border: 1px solid transparent;
+    border-radius: 0.25rem;
+    }
+
+    .alert-danger {
+    color: #761b18;
+    background-color: #f9d6d5;
+    border-color: #f7c6c5;
+    }
+
+    .alert-danger hr {
+    border-top-color: #f4b0af;
+    }
+
+    .alert-danger .alert-link {
+    color: #4c110f;
+    }
+    .alert-success {
+  color: #1d643b;
+  background-color: #d7f3e3;
+  border-color: #c7eed8;
+}
+
+.alert-success hr {
+  border-top-color: #b3e8ca;
+}
+
+.alert-success .alert-link {
+  color: #123c24;
+}
+    </style>
 </head>
 <body>
 
 <nav id="nav">
 <div class="logo">
-        <a href="{{route('portfolio')}}"> <img class="" src="{{ asset('storage/images/logo3.png') }}" alt="sdsd" id="logo"></a>
+        <a href="{{route('portfolio')}}"> <img class="" src="{{ asset('storage/images/logo test2.png') }}" alt="sdsd" id="logo"></a>
     </div>
     <ul class="navbar">
         <li><a href="#propos" class="link"></a></li>
@@ -51,31 +86,32 @@
                                 décrivez votre projet. Je vous répondrai dès que possible.<br> s'il vous plaît, attendez 
                                 quelques jours pour que je réponde
                                 </p>
+
+                                @include('errors')
                         </div>
-                        <div class="right">
+                        
+                        <div class="right" data-aos="fade-up" data-aos-delay="300">
+                       
                             <div class="form-control">
                                 <form method="POST" action=" {{route('contact.store')}} " class="form">
                                         @csrf
-                                        <div class="field" data-aos="fade-left"   data-aos-delay="300"
-                                                        data-aos-offset="0"  data-aos-easing="ease-in-back">
+                                        <div class="field" >
                                             <input class="field-input" type="text" name="nom" placeholder="Nom">
                                         </div>
-                                        <div class="field" data-aos="fade-left"   data-aos-delay="300"
-                                                         data-aos-offset="0"  data-aos-easing="ease-in-back">
+                                        <div class="field" >
                                             <input class="field-input" type="text" name="prenom" placeholder="prenom">
                                         </div>
-                                        <div class="field" data-aos="fade-left"   data-aos-delay="300"
-                                                        data-aos-offset="0"  data-aos-easing="ease-in-back">
+                                        <div class="field" >
                                             <input class="field-input" type="text" name="email" placeholder="e-mail">
                                         </div>
-                                        <div class="field" data-aos="fade-left"   data-aos-delay="300"
-                                                        data-aos-offset="0"  data-aos-easing="ease-in-back">
-                                        <textarea class="field-input message" row="6" placeholder="Message" name="message"></textarea>
+                                        <div class="field" >
+                                        <textarea class="field-input message" row="6" placeholder="Message" name="contenu"></textarea>
                                         </div>
-                                        <input type="submit" value="Envoyer" class="btn envoyer" data-aos="fade-left"   data-aos-delay="300"
-                                                        data-aos-offset="0"  data-aos-easing="ease-in-back">
+                                        <input type="submit" value="Envoyer" class="btn envoyer">
                                    
                                 </form>
+                               
+                                 
                             </div>
                         <!-- <marquee behavior="" direction="down" height="100" width="200" bgcolor="white">  Scrolling text</marquee> -->
                         </div>
@@ -213,10 +249,10 @@ navSlid();
 
     window.onscroll = function(){
         if(window.pageYOffset > 50) {
-            nav.style.background = '#333';
+            nav.style.background = 'rgba(0, 0, 0, 0.3)';
             nav.style.boxShadow = '0px 0px 32px 1px rgba(255, 255, 255)';
-            nav.style.height = "6vh";
-            document.getElementById('logo').style.width = '40%'
+            //nav.style.height = "6vh";
+            //document.getElementById('logo').style.width = '40%'
             button_top.style.color = '#53b4e5';
             button_top.style.border = "1px solid #53b4e5";
             button_top.style.borderRadius = "50%";
@@ -226,9 +262,9 @@ navSlid();
         }else {
             nav.style.background = "transparent";
             nav.style.boxShadow = '0px 10px 32px 18px rgba(255, 255, 255,0)';
-            nav.style.height = "8vh";
-            document.getElementById('logo').style.width = '50%'
-            document.getElementById('logo').style.transition = '0.5s'
+            //nav.style.height = "8vh";
+            //document.getElementById('logo').style.width = '50%'
+            //document.getElementById('logo').style.transition = '0.5s'
             button_top.style.color = 'rgb(255,255,255,0)'; 
             button_top.style.border = "none";
            

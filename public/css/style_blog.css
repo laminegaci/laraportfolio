@@ -3,23 +3,35 @@
     padding:0px;
     box-sizing: border-box;
 }
-body{
-    background: #2193b0;  /* fallback for old browsers */   
-    background: -webkit-linear-gradient(to right, #6dd5ed, #2193b0);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #6dd5ed, #2193b0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-}
+
 .slidbar {
     width: 100%;
     height: 300px;
-    /* background-image: url('../storage/images/bg_blog.jpg'); */
+    background-image: url('../storage/images/bg_blog.jpg');
     background-repeat: no-repeat;
     background-size: cover;
 }
+.content{
+    width: 100vw;
+    min-height: 100vh;
+    background-color: #fff;
+}
+
 .media {
     padding: 2rem 1rem;
     background-color: #fff;
     margin: 1rem;
+    width: 100%;
+    grid-template-columns: 40% 60%;
+    box-shadow: 0px 0px 17px 0px rgba(0,0,0,0.3);
 }
+.latest_article{
+    padding: 20px;
+    border: 1px solid #ddd;
+    color: #0062cc;
+    
+}
+
 #navig{
     width: 100%;
     position: fixed;
@@ -31,7 +43,7 @@ body{
     height: 8vh;
 }
 .logo img{
-   width: 50%;
+   width: 35%;
 }
 .navbarr{
     display: flex;
@@ -58,54 +70,11 @@ body{
 .burger div{
     width: 25px;
     height: 3px;
-    background-color: white;
+    background-color: #333;
     margin: 5px;
     transition: all 0.3s ease;
 }
-.accueil{
-    background-image: url('../images/bg.svg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 100%;
-    height: 754px;
-}
-.hello_area{
-    background-color: rgba(187, 182, 215, 0.6);
-    border-radius: 0px 150px 150px 0px;
-    width: 600px;
-    height: 654px;
-    display: block;
-    float: left;
-    margin-top: 50px;
-}
-.hello_area .titre{
-    padding-top: 70px;
-    text-align: center;
-    color: #fff;
-    font-size: 50px;
-    font-family:Comic Sans MS, Comic Sans, cursive;
-}
 
-.hello_area .description{
-    margin-top:50px ;
-    color:#000;
-    text-align: center;
-    font-size: 28px;
-}
-.hello_area a{
-    font-size: 26px;
-    text-align: center;
-    color: #ffffff;
-    padding: 15px 15px;
-    box-shadow: 0px 6px 18px 0 rgba(0, 0, 0, 0.25);
-    background-color: #3bdbc7;
-    display: block;
-    text-decoration: none;
-    width: 50%;
-    position: relative;
-    top:80px;
-    margin: 0 auto;
-}
 .container-fluid hr:not(.footer-hr){
     width: 10%;
     margin: 0 auto;
@@ -244,7 +213,7 @@ footer .titre{
        right:0px;
        height: 92vh;
        top:6vh;
-       background:#333;
+       background: white;
        display: grid;
        grid-auto-columns: 50px;
        grid-auto-rows: 100px;

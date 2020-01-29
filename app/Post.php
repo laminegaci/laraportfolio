@@ -11,4 +11,8 @@ class Post extends Model
     public function user(){
         return $this->belongsTo(User::class);
     }
+
+    public function scopeDernier($q){
+        $q->latest('date_publication')->take(5);
+    }
 }

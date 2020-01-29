@@ -18,8 +18,8 @@ class PostController extends Controller
     public function index()
     {
         $posts = Post::latest('date_publication')->get();;
-        $lastposts = Post::latest('date_publication')->take(5)->get();
-        return view('posts.posts', compact('posts','lastposts'));
+       
+        return view('posts.posts', compact('posts'));
     }
   
     public function show($titre)
@@ -27,7 +27,6 @@ class PostController extends Controller
         $posts = Post::where('titre',$titre)->first();
         return view('posts.show', compact('posts'));   
     }
-
     public function technologie_cat(){
         $posts = Post::latest('date_publication')->where('categorie','technologie')->get();
         return view('posts.category.technologies', compact('posts'));
