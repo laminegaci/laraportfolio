@@ -35,7 +35,7 @@
                                     <td> {{ $message->prenom }} </td>
                                     <td> {{ $message->email }} </td>
                                     <td> {{ $message->Contenu }} </td>
-                                    <td> {{ $message->date_envoie }} </td>
+                                    <td> {{ Carbon\Carbon::parse($message->date_envoie)->diffForHumans() }} </td>
                                 </tr>
                            @endforeach
                         </tbody>

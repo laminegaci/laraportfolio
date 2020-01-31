@@ -19,3 +19,17 @@
     alert('votre message a été envoyer avec succès');
 </script>
 @endif
+
+@if(session()->has('successPost'))
+    <div class="alert alert-success">
+        {{ session('successPost') }}
+    </div> 
+
+@endif
+
+@if(session()->has('successProjet'))
+    <div class="alert alert-success">
+        {{ session('successProjet') }}
+    </div> 
+
+@endif

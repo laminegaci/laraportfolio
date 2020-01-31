@@ -40,8 +40,12 @@
 
             </div>
             <div class="col-md-4">
+                <div class="row mb-4 latest_article">  
+                    <ul class="ml-4">
+                    @include('posts.widgets.search')
+                    </ul>
+                </div>
                 <div class="row  latest_article">
-                    
                     <ul class="ml-4">
                     @include('posts.widgets.lastposts')
                     </ul>

@@ -14,11 +14,12 @@
 
 <h2>formulaire de creation de post</h2>
 
-<form action=" {{route('posts.store')}} " class="form" method="POST">
+<form action=" {{route('posts.store')}} " method="POST" enctype="multipart/form-data">
     @csrf
     
     <div class="form-group">
-        <input type="text" name="titre" class="form-control" placeholder="titre">
+        <input type="text" name="titre" class="form-control" placeholder="titre"  value="{{old('titre')}}">
+        <!-- <span class="text-danger"> {{ $errors->first('titre') }}</span> -->
     </div>
     <div class="form-group">
         <textarea name="description" class="form-control" id="" cols="30" rows="10" placeholder="description"></textarea>
@@ -44,13 +45,8 @@
     <div class="form-group">
         <input type="file" name="image" class="form-control-file" id="exampleFormControlFile1">
     </div>
-   
-    
-   
-
-    
-   
-    <button class="btn btn-success">sauvgarder</button>
+  
+    <button type="submit" class="btn btn-success">sauvgarder</button>
 </form>
 </div>
 @endsection

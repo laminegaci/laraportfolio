@@ -47,8 +47,7 @@ class PostController extends Controller
      */
     public function create()
     {   
-    //     //dd(auth()->user());
-    //     return view('admin.post.create');
+        //
     }
     
 
@@ -62,27 +61,7 @@ class PostController extends Controller
      */
      public function store(Request $request)
     {
-    //     //dd(request()->all());
-    //     request()->validate([
-    //         'titre' => 'required',
-    //         'description' => 'required',
-    //         'categorie' => 'required',
-    //         'image' => 'required',
-    //     ]);
-
-    //     // Post::insert([
-    //     //     'titre' => request('titre'),
-    //     //     'description' => request('description'),
-    //     //     'categorie' => request('categorie'),
-    //     //     'image' => request('image'),
-    //     //     'date_publication' => Carbon::now(),
-    //     //     'user_id' => request('user_id'),
-    //     // ]);
-       
-    //     auth()->user()->posts()->create(request()->all() + ['date_publication' => Carbon::now()]);
-    //     //Post::create(request()->all() + ['date_publication' => Carbon::now() , 'user_id' => auth()->id()]);
-
-    //     return redirect()->route('posts.index');
+        //
     }
 
     

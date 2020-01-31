@@ -39,26 +39,33 @@ class ManagePortfolioController extends Controller
      */
     public function store(Request $request)
     {
-        dd(request()->all());
-        //   request()->validate([
-        //     'type' => 'required',
-        //     'description' => 'required',
-        //     'image' => 'required',
-        // ]);
+       // dd($request->file('image'));
+        // dd(request()->all());
+        $request->validate([
+            'type' => 'required',
+            'description' => 'required',
+            'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+        ]);
 
-        // Post::insert([
-        //     'titre' => request('titre'),
-        //     'description' => request('description'),
-        //     'categorie' => request('categorie'),
-        //     'image' => request('image'),
-        //     'date_publication' => Carbon::now(),
-        //     'user_id' => request('user_id'),
-        // ]);
-       
-        // auth()->user()->posts()->create(request()->all() + ['date_publication' => Carbon::now()]);
-        // //Post::create(request()->all() + ['date_publication' => Carbon::now() , 'user_id' => auth()->id()]);
-
-        // return redirect()->route('posts.index');
+        if($file   =   $request->file('image')) {
+ 
+            $name      =   time().time().'.'.$file->getClientOriginalExtension();
+             
+            $target_path    =   public_path('/uploads/');
+             
+                if($file->move($target_path, $name)) {
+                    
+                    // save file name in the database
+                    Portfolio::create([
+                        'type' => request('type'),
+                        'description' => request('description'),
+                        'image' => "$name",
+                        ]);
+                    
+                    
+                        return redirect()->route('portfolios.store')->with("successProjet", "Projet est ajouté avec succès");
+                }
+            }
     }
 
     /**

@@ -40,27 +40,39 @@ class ManagePostController extends Controller
      */
     public function store(Request $request)
     {
-         //dd(request()->all());
-         request()->validate([
-            'titre' => 'required',
+        // dd($request->file('image'));
+        // dd(request()->all());
+        $request->validate([
+            'titre' => 'required|min:5',
             'description' => 'required',
             'categorie' => 'required',
-            'image' => 'required',
+            'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
         ]);
 
-        // Post::insert([
-        //     'titre' => request('titre'),
-        //     'description' => request('description'),
-        //     'categorie' => request('categorie'),
-        //     'image' => request('image'),
-        //     'date_publication' => Carbon::now(),
-        //     'user_id' => request('user_id'),
-        // ]);
+        if($file   =   $request->file('image')) {
+ 
+            $name      =   time().time().'.'.$file->getClientOriginalExtension();
+             
+            $target_path    =   public_path('/uploads/');
+             
+                if($file->move($target_path, $name)) {
+                    
+                    // save file name in the database
+                    auth()->user()->posts()->create([
+                        'titre' => request('titre'),
+                        'description' => request('description'),
+                        'categorie' => request('categorie'),
+                        'image' => "$name",
+                        'date_publication' => Carbon::now()
+                        ]);
+                    
+                    
+                        return redirect()->route('posts.index')->with("successPost", "Post est ajouté avec succès");
+                }
+            }
        
-        auth()->user()->posts()->create(request()->all() + ['date_publication' => Carbon::now()]);
-        //Post::create(request()->all() + ['date_publication' => Carbon::now() , 'user_id' => auth()->id()]);
-
-        return redirect()->route('posts.index');
+        // auth()->user()->posts()->create($request->all() + ['date_publication' => Carbon::now());
+        //Post::create(request()->all() + ['date_publication' => Carbon::now() , 'user_id' => auth()->id()]);   
     }
 
     /**

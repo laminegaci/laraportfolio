@@ -185,7 +185,7 @@
                     @foreach($portfolios as $portfolio)
                     <div class="item" data-aos="fade-up" data-aos-easing="ease-in-back" data-aos-duration="1000">
                           <div class="face1">
-                           <img src="{{ $portfolio->image }}" alt="mkch">
+                           <img src="/uploads/{{ $portfolio->image }}" alt="mkch">
                          </div>
                          <div class="face2">
                              <h3>{{$portfolio->type}}</h3>

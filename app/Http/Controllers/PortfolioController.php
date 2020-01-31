@@ -14,7 +14,7 @@ class PortfolioController extends Controller
      */
     public function index()
     {
-        $portfolios = Portfolio::take(6)->get();
+        $portfolios = Portfolio::latest('created_at')->take(6)->get();
         return view('portfolio',compact('portfolios'));
     }
 

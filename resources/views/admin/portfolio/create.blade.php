@@ -13,7 +13,7 @@
 @include('errors')  
 <h2>formulaire de creation de projet</h2>
 
-<form action=" {{route('portfolios.store')}} " class="form" method="POST">
+<form action=" {{route('portfolios.store')}} " class="form" method="POST" enctype="multipart/form-data">
     @csrf
     
     <div class="form-group">
