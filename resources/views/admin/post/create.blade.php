@@ -24,23 +24,27 @@
     <div class="form-group">
         <textarea name="description" class="form-control" id="" cols="30" rows="10" placeholder="description"></textarea>
     </div>
-    <div class="form-check">
-        <input class="form-check-input" type="radio" name="categorie" id="exampleRadios1" value="Technologie" checked>
-        <label class="form-check-label" for="exampleRadios1">
-        Technologie
-        </label>
-    </div>
-    <div class="form-check">
-        <input class="form-check-input" type="radio" name="categorie" id="exampleRadios2" value="Windows">
-        <label class="form-check-label" for="exampleRadios2">
-        Windows
-        </label>
-    </div>
-    <div class="form-check">
-        <input class="form-check-input" type="radio" name="categorie" id="exampleRadios2" value="programmation">
-        <label class="form-check-label" for="exampleRadios2">
-        programmation
-        </label>
+    <div class="form group">
+        @foreach($categories as $categorie)
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="categorie" id="exampleRadios1" value="{{$categorie->categorie}}" checked>
+                <label class="form-check-label" for="exampleRadios1">
+                {{$categorie->categorie}}
+                </label>
+            </div>
+        @endforeach
+        <!-- <div class="form-check">
+            <input class="form-check-input" type="radio" name="categorie" id="exampleRadios2" value="Windows">
+            <label class="form-check-label" for="exampleRadios2">
+            Windows
+            </label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="categorie" id="exampleRadios2" value="programmation">
+            <label class="form-check-label" for="exampleRadios2">
+            programmation
+            </label>
+        </div> -->
     </div>
     <div class="form-group">
         <input type="file" name="image" class="form-control-file" id="exampleFormControlFile1">

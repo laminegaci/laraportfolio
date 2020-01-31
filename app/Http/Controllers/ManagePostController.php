@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 use App\Post;
+use App\Category;
 use Illuminate\Http\Request;
 use Carbon\Carbon;
 class ManagePostController extends Controller
@@ -18,6 +19,7 @@ class ManagePostController extends Controller
     public function index()
     {
         $posts = Post::all();
+        
         return view('admin.post.posts', compact('posts'));
     }
 
@@ -29,7 +31,8 @@ class ManagePostController extends Controller
     public function create()
     {
         //dd(auth()->user());
-        return view('admin.post.create');
+        $categories = Category::all();
+        return view('admin.post.create', compact('categories'));
     }
 
     /**

@@ -2,20 +2,29 @@
 
 @section('content')
 @include('errors')  
-<div class="container">
+
     <div class="row justify-content-center">
-        <div class="col-md-12">
+        <div class="col md 2">
+            <div class="card">
+                <div class="card-header"> <a href=" {{route('dashboard')}} "><li>dashboard</li></a></div>
+                <div class="card-body"> 
+                <ul>
+                       
+                       <a href=" {{route('posts.index')}} "><li>posts</li></a>
+                       <a href=" {{route('portfolios.index')}} "><li>projets</li></a>
+                       <a href=" {{route('messages.index')}} "><li>messages</li></a>
+                   </ul>
+                   
+                </div>
+            </div>
+        </div>
+        <div class="col-md-10">
             <div class="card">
                 <div class="card-header">show posts <a href="{{route('posts.create')}}">ajouter nv post</a></div>
 
                 <div class="card-body">
                    
-                    <ul>
-                        <a href=" {{route('dashboard')}} "><li>dashboard</li></a>
-                        <a href=" {{route('posts.index')}} "><li>posts</li></a>
-                        <a href=" {{route('portfolios.index')}} "><li>projets</li></a>
-                        <a href=" {{route('messages.index')}} "><li>messages</li></a>
-                    </ul>
+                   
 
                     <table class="table">
                         <thead>
@@ -50,6 +59,4 @@
         </div>
     </div>
     
-
-</div>
 @endsection
