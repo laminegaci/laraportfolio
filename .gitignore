@@ -1,5 +1,6 @@
 /node_modules
 /public/hot
+/public/uploads
 /public/css/dist
 /public/fontawesome-free-5.11.2-web
 /public/storage
