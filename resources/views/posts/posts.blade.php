@@ -44,7 +44,7 @@
                             <div class="media-body">
                             
                                 <h5 class="mt-0">{{ $post->titre }} </h5>
-                                   <p> {{  Str::limit($post->description, 200) }}</p>
+                                   <p> {!!  Str::limit($post->description, 200) !!}</p>
                             </div> 
                             <p  > <span style="color:blue;">publier : {{ Carbon\Carbon::parse($post->date_publication)->diffForHumans() }} <br></span> <span>par : {{$post->user->name}} </span></p>
                             
@@ -53,10 +53,14 @@
                         </div>                     
                     </div>
                     @empty
-                    <h1 style="color:red;">not yet</h1>
+                    <div class="empy text-center">
+                    <h1 >pas d'articles encore</h1>
+                    </div>
                     @endforelse
                 
-
+                <div class="mt-5 justify-content-center d-flex">
+                {!! $posts->appends(['q' => request('q')]) ->links() !!}
+                </div>
                 </div>
                 <div class="col-md-4">
                     <div class="row mb-4 latest_article">  

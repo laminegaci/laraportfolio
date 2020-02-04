@@ -12,9 +12,9 @@
     
 <div class="row">
     <div class="col-md-8">
-        <img class="mr-3" style=";width: 100%;max-width:80%;height: auto;" src="/uploads/{{ $posts->image }}" alt="mal9itch  l'image">
+        <img class="mr-3" style="width: 100%; height: auto;" src="/uploads/{{ $posts->image }}" alt="mal9itch  l'image">
         <h2>{{$posts->titre}}</h2>
-        <p>{{$posts->description}}</p>
+        <p>{!! $posts->description !!}</p>
        
     </div>
     <div class="col-md-4">
@@ -28,5 +28,7 @@
    
 </div>
 </div>
-    
+
+
+@include('layouts.footer_blog')
 @stop

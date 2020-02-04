@@ -31,7 +31,6 @@
                             <tr>
                                 <th scope="col">#</th>
                                 <th scope="col">titre</th>
-                                <th scope="col">description</th>
                                 <th scope="col">categorie</th>
                                 <th scope="col">image</th>
                                 <th scope="col">date publication</th>
@@ -41,8 +40,7 @@
                            @foreach($posts as $post)
                            <tr>
                                 <th scope="row">{{$post->id}}</th>
-                                <td>{{ Str::limit($post->titre,10) }}</td>
-                                <td>{{ Str::limit($post->description,20) }}</td>
+                                <td>{{ Str::limit($post->titre,15) }}</td>
                                 <td>{{$post->categorie}}</td>
                                 <td>{{ Str::limit($post->image,10) }}</td>
                                 <td>{{$post->date_publication}}</td>

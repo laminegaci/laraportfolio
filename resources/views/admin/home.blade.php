@@ -15,6 +15,11 @@
                     @endif
 
                     You are logged in
+                    <div class="row">
+                    <div class="col-md-4 bg-danger">aaa</div>
+                    <div class="col-md-4 bg-info">bbb</div>
+                    <div class="col-md-4 bg-danger">ccc</div>
+                    </div>
                     <ul>
                         <a href=" {{route('dashboard')}} "><li>dashboard</li></a>
                         <a href=" {{route('posts.index')}} "><li>posts</li></a>

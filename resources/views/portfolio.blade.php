@@ -47,6 +47,7 @@
                 FULL STACK Front-End & Back-End <br> à Alger. <br>
                 Bienvenue sur mon portfolio!  <i class="quote orange right icon"></i></p>
                 <a href="{{route('contact.create')}}">Contactez moi</a>
+
             </div><!-- end class hello_area -->
         </div><!-- end row class -->
         <img style="margin-top:625px; margin-left:150px; width:60px;height:60px;" src="{{ asset('storage/images/button_down.png') }}" alt="">
@@ -61,8 +62,8 @@
     </div><!-- end class accueil -->
 
     <section class="section_propos" id="propos">
-        <h1 class="titre">A propos</h1>
-        <hr>
+        <h1 class="titre" data-aos="fade-left">A propos</h1 >
+        <hr data-aos="fade-left" data-aos-delay="300">
             
             <div class="propos">
                 <div class="my_photo" data-aos="fade-right" data-aos-duration="3000">
@@ -88,15 +89,14 @@
 
     <section class="section_services" id="services">
                 
-                <h1 class="titre">Services</h1>
-                <hr>
+                <h1 class="titre" data-aos="zoom-in">Services</h1>
+                <hr data-aos="zoom-in" data-aos-delay="150">
            
-            <hr>
             <div class=" container">
        
                 <div class="services">
                    
-                    <div class="svs_item" data-aos="fade-up" de>
+                    <div class="svs_item" data-aos="fade-up">
                         
                             <div class="service">
                                 <i class="edit big icon"></i>
@@ -173,9 +173,8 @@
    
     
     <section class="section_project" id="projects">
-            <h1 class="titre" data-aos="fade-right" data-aos-duration="3000" data-aos-once="false" >Portfolio</h1>
-
-            <hr data-aos="fade-right" data-aos-easing="ease-in-back" data-aos-duration="3000" data-aos-once="false">
+            <h1 class="titre" data-aos="fade-right"  >Portfolio</h1>
+            <hr data-aos="fade-right" data-aos-delay="300">
 
        
                  
@@ -204,6 +203,7 @@
            
 
     </section><!-- end section_project -->
+    
 
     <footer>
         
@@ -265,6 +265,7 @@
             <hr class="footer-hr">
             <p class="copyright"> 2019-2020 Mon Portfolio  -Tous les droits sont réservés.</p>
         </div>
+        
     </footer><!-- end footer -->
 
      

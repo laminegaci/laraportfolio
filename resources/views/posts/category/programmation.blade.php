@@ -24,7 +24,7 @@
                         <div class="media-body">
                         
                             <h5 class="mt-0">{{ $post->titre }} </h5>
-                                {{$post->description, 200}}
+                            {!!  Str::limit($post->description, 200) !!}
                         </div> 
                         <p  > <span style="color:blue;">publier : {{ Carbon\Carbon::parse($post->date_publication)->diffForHumans() }} <br></span> <span>par : {{$post->user->name}} </span></p>
                         
@@ -34,7 +34,9 @@
                 </div>
                 
                 @empty
-                <h1 style="color:red;">not yet</h1>
+                <div class="empy text-center">
+                <h1 >pas d'articles encore pour cette categorie</h1>
+                </div>
             @endforelse
         
 
