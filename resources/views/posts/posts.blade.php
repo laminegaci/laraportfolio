@@ -53,7 +53,7 @@
                         </div>                     
                     </div>
                     @empty
-                    <div class="empy text-center">
+                    <div class="empty text-center">
                     <h1 >pas d'articles encore</h1>
                     </div>
                     @endforelse
@@ -63,17 +63,23 @@
                 </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="row mb-4 latest_article">  
+                    <div class="row mb-4 latest_article empty">  
                         <ul class="ml-4">
                           @include('posts.widgets.search')
                         </ul>
                     </div>
-                    <div class="row mb-4 latest_article">
+                    <div class="row mb-4 latest_article empty">
                         
                         <ul class="ml-4">
                           @include('posts.widgets.lastposts')
                         </ul>
-                    </div>                   
+                    </div>
+                    <div class="row mb-4 latest_article empty">
+                        
+                        <ul class="ml-4">
+                          @include('posts.widgets.tags')
+                        </ul>
+                    </div>                           
                 </div>
             </div>
            

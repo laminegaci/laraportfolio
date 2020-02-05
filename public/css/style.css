@@ -134,7 +134,7 @@ html{
 /*-------------------------------------------page projets---------------------------------------------------------------*/
 .section_project{
     width: 100%;
-    min-height: 753px;
+    max-height: 753px;
     /* background-image: url("../images/hd_b1b0d091a611568ba7ddd8e5e69554f5.jpg");
     background-repeat: no-repeat;
     background-attachment: fixed; */
@@ -291,14 +291,21 @@ html{
     font-size: 40px;
     font-family:Comic Sans MS, Comic Sans, cursive;
 }
-
+.section_propos .tete{
+    padding-top: 40px;
+    margin-left: 50px;
+    color: #999;
+    font-size: 16px;
+    font-family:Comic Sans MS, Comic Sans, cursive;
+}
 .section_propos .description{
     padding-top: 40px;
-    text-align: center;
+    margin-left: 50px;
     color: black;
     font-size: 25px;
     font-family:Comic Sans MS, Comic Sans, cursive;
 }
+
 
 .section_propos .competence{
     text-align: center;
@@ -311,7 +318,7 @@ html{
     width: 90%;
     height: 86%;
     display: grid;
-    grid-template-columns: 30% 70%;
+    grid-template-columns: 40% 60%;
    
 }
 .propos .details marquee {
@@ -325,7 +332,7 @@ html{
 }
 .propos .my_photo img{
     width: 100%;
-    transform: translateX(100px);
+    transform: translateX(0px);
     box-shadow: 0px 0px 17px 0px rgba(0,0,0,0.75);
    
 }
@@ -476,7 +483,7 @@ footer .titre{
     }
     .propos .my_photo img{
         width: 100%;
-        transform: translateX(30px);
+        transform: translateX(0px);
         box-shadow: 0px 0px 17px 0px rgba(0,0,0,0.75);
     }
     

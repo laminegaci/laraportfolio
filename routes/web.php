@@ -31,14 +31,6 @@ Route::group(['middleware' => ['auth']], function(){
 
 Route::resource('/contact', 'messageController');
 
-
-
-
-
-
-
-
-
 Auth::routes();
 
 //Route::get('/home', 'HomeController@index')->name('home');

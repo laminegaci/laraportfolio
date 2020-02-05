@@ -70,17 +70,21 @@
                     <img src="storage/images/IMG_0571.png" alt="">
                 </div>
                 <div class="details" data-aos="fade-left" data-aos-duration="3000">
+                    <p class="tete">
+                    jeune développeur web dynamique et motivé,  passionné  d'informatique et de nouvelles technologies   
+                    </p>
                     <p class="description">
-                        Salut! Je m'appelle GAci mohamed lamine, <br/>Algerien habité a alger, je suis un developpeur web<br/> spécialisée 
-                        dans la création et la refonte<br/>  de sites web et apllication web<br/>
+                    
+                        Je m'appelle GACI mohamed lamine, Algerien habite a alger <br/>
+                        spécialisée dans la création et la refonte de sites web et apllication web<br/>
                         Je travaille avec :<br/>
                         
                     </p>
             
-                <p class="competence">HTML/CSS | Bootstrap | Semantic UI | JQuerry | PHP | Laravel | Mysql</p>
+                <p class="competence">HTML/CSS | Bootstrap | Semantic UI | Javascipt | PHP | Laravel | Mysql</p>
 
                 
-                <marquee behavior="" direction="left" height="80" width="500">  𝓙𝓮 𝓼𝓾𝓲𝓼 𝓭é𝓿𝓮𝓵𝓸𝓹𝓹𝓮𝓾𝓻 𝔀𝓮𝓫 𝓲𝓷𝓭é𝓹𝓮𝓷𝓭𝓪𝓷𝓽</marquee>
+                <marquee behavior="" direction="left" height="80" width="500">  𝓭é𝓿𝓮𝓵𝓸𝓹𝓹𝓮𝓾𝓻 𝔀𝓮𝓫 𝓲𝓷𝓭é𝓹𝓮𝓷𝓭𝓪𝓷𝓽</marquee>
                 </div>
             </div>
     </section><!-- end section_propos -->
