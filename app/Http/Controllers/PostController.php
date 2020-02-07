@@ -18,8 +18,8 @@ class PostController extends Controller
     public function index()
     {
         $posts = Post::latest('date_publication')->paginate(10);
-       
-        return view('posts.posts', compact('posts'));
+        $count = Post::all()->count();
+        return view('posts.posts', compact('posts','count'));
     }
   
     public function show($titre)
@@ -36,8 +36,8 @@ class PostController extends Controller
         return view('posts.category.windows', compact('posts'));
     }
     public function programmation_cat(){
-        $posts = Post::where('categorie','programmation')->get();
-        return view('posts.category.programmation', compact('posts'));
+        $posts = Post::where('categorie','developpement')->get();
+        return view('posts.category.developpement', compact('posts'));
     }
 
     /**

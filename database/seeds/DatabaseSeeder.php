@@ -14,6 +14,7 @@ class DatabaseSeeder extends Seeder
         $this->call(portfolios::class);
         $this->call(users::class);
         $this->call(posts::class);
+      
         
     }
 }

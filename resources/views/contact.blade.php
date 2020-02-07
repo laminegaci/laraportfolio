@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>laraportolio/contact</title>
+    <title>Mohamed Lamine | Developpeur web</title>
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
     <link rel="stylesheet" href="{{ asset('fontawesome-free-5.11.2-web/css/all.css') }}"/>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
-    
+    <link rel="icon" type="image/png" href="{{ asset('storage/images/favicon.png') }}" />
     
     
     
@@ -58,7 +58,7 @@
 
 <nav id="nav">
 <div class="logo">
-        <a href="{{route('portfolio')}}"> <img class="" src="{{ asset('storage/images/logo test2.png') }}" alt="sdsd" id="logo"></a>
+        <a href="{{route('portfolio')}}"> <img class="" src="{{ asset('storage/images/logo.png') }}" alt="sdsd" id="logo"></a>
     </div>
     <ul class="navbar">
         <li><a href="#propos" class="link"></a></li>

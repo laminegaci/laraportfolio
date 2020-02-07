@@ -1,7 +1,7 @@
 @extends('layouts.layout_blog')
 
 @section('title')
-    blog technologies
+Mohamed Lamine | Developpeur web
 @endsection
 
 @section('content')
@@ -10,7 +10,7 @@
 @include('layouts.header_blog')
 
 <div class="container mt-5">
-    <h1>Technologie articles</h1>
+<h2>icon | Technologie</h2>
     
     <div class="row">
         <div class="col-md-8">   
@@ -18,7 +18,7 @@
             @forelse($posts as $post)     
                 <div class="media row">
                     <div class="col-lg-5">
-                        <img class="mr-3" style="width:250px;height:150px;" src="storage/images/{{ $post->image }}" alt="mal9itch  l'image">
+                        <img class="mr-3" style="width:250px;height:150px;" src="/uploads/{{ $post->image }}" alt="mal9itch  l'image">
                     </div>
                     <div class="col-lg-7">
                         <div class="media-body">

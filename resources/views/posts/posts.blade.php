@@ -1,7 +1,7 @@
 @extends('layouts.layout_blog')
 
 @section('title')
-    blog
+Mohamed Lamine | Developpeur web
 @endsection
 
 @section('content')
@@ -9,13 +9,13 @@
 <div class="content">
 <nav id="navig">
             <div class="logo">
-                <a href="{{ route('portfolio') }}"> <img class="" src="{{ asset('storage/images/logo test2.png') }}" alt="mkchha" id="logo"></a>
+                <a href="{{ route('portfolio') }}"> <img class="" src="{{ asset('storage/images/logo.png') }}" alt="mkchha" id="logo"></a>
             </div>
             <ul class="navbarr">
                 <li> <a href="{{route('blog.posts.index')}} " class="link">Touts</a></li>
                 <li> <a href="{{route('blog.posts.technologie')}} " class="link">Techologie</a></li>
                 <li><a href="{{route('blog.posts.windows')}}" class="link">Windows</a></li>
-                <li><a href="{{route('blog.posts.programmation')}}" class="link">Programmation</a></li>
+                <li><a href="{{route('blog.posts.developpement')}}" class="link">developpement web</a></li>
             </ul>
             <div class="burger">
                 <div class="line1"></div>
@@ -29,7 +29,7 @@
             </div>
 
         <div class="container mt-5">
-        <h1>Toute Les articles </h1>
+        <h2>Touts Les articles</h2>
             
             <div class="row">
                 <div class="col-md-8">   
@@ -46,7 +46,7 @@
                                 <h5 class="mt-0">{{ $post->titre }} </h5>
                                    <p> {!!  Str::limit($post->description, 200) !!}</p>
                             </div> 
-                            <p  > <span style="color:blue;">publier : {{ Carbon\Carbon::parse($post->date_publication)->diffForHumans() }} <br></span> <span>par : {{$post->user->name}} </span></p>
+                            <p> <span style="color:blue;">publier : {{ Carbon\Carbon::parse($post->date_publication)->diffForHumans() }} <br></span> <span>par : {{$post->user->name}} </span></p>
                             
                             <a  href="{{ route('blog.posts.show', $post->titre) }}"><button class="btn btn-primary">Lire plus ...</button></a>  
                             

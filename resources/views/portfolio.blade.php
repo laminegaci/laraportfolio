@@ -5,13 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Laraportfolio</title>
+    <title>Mohamed Lamine | Developpeur web</title>
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
     <link rel="stylesheet" href="{{ asset('fontawesome-free-5.11.2-web/css/all.css') }}"/>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
     
-
+    <link rel="icon" type="image/png" href="{{ asset('storage/images/favicon.png') }}" />
     <link rel="stylesheet" href="{{ asset('css/dist/semantic.css') }}"/>
     <script src="{{ asset('css/dist/jquery-3.3.1.min.js') }}"></script>
     <script src="{{ asset('css/dist/semantic.min.js') }}"></script>
@@ -22,7 +22,7 @@
 <div class="container-fluid">
     <nav id="nav">
         <div class="logo">
-          <a href="#accueil"> <img class="" src="storage/images/logo test2.png" alt="" id="logo"></a>
+          <a href="#accueil"> <img class="" src="storage/images/logo.png" alt="mkch" id="logo"></a>
         </div>
         <ul class="navbar">
             <li><a href="#propos" class="link">A propos</a></li>

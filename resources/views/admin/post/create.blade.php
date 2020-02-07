@@ -8,7 +8,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <!-- <title>{{ config('app.name', 'Laravel') }}</title> -->
-    <title>create post hhhh</title>
+    <title>create post</title>
     <!-- Scripts -->
    
     <!-- Fonts -->

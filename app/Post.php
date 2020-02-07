@@ -15,4 +15,6 @@ class Post extends Model
     public function scopeDernier($q){
         $q->latest('date_publication')->take(5);
     }
+
+  
 }

@@ -18,7 +18,7 @@ Route::get('/', 'PortfolioController@index')->name('portfolio');
 Route::get('/posts', 'PostController@index')->name('blog.posts.index');
 Route::get('/posts/ctg/technologie', 'PostController@technologie_cat')->name('blog.posts.technologie');
 Route::get('/posts/ctg/Windows', 'PostController@windows_cat')->name('blog.posts.windows');
-Route::get('/posts/ctg/Programmation', 'PostController@programmation_cat')->name('blog.posts.programmation');
+Route::get('/posts/ctg/developpement web', 'PostController@programmation_cat')->name('blog.posts.developpement');
 Route::get('/posts/{id}', 'PostController@show')->name('blog.posts.show');
 
 Route::group(['middleware' => ['auth']], function(){
